@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps',
     'social_django',
     'django_extensions',
+    'images.apps.ImagesConfig',
     
     
 ]
@@ -144,6 +145,7 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'account.authentication.EmailAuthBackend',
     'social_core.backends.facebook.FacebookOAuth2',
+    'social_core.backends.google.GoogleOAuth2',
 ]
 
 EMAIL_HOST = ''
@@ -153,3 +155,10 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+
+SOCIAL_AUTH_FACEBOOK_KEY = 416408983173036
+SOCIAL_AUTH_FACEBOOK_SECRET = 'fe26964a211fad3312b1466950dbb316'
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '684533862934-ttupu1opb63873nfc00afd7kj14ejr22.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
