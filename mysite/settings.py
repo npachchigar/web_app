@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'social_django',
     'django_extensions',
     'images.apps.ImagesConfig',
-    
+    'easy_thumbnails',
     
 ]
 
@@ -147,6 +147,8 @@ AUTHENTICATION_BACKENDS = [
     'social_core.backends.facebook.FacebookOAuth2',
     'social_core.backends.google.GoogleOAuth2',
 ]
+
+CSRF_COOKIE_SECURE = True
 
 EMAIL_HOST = ''
 EMAIL_HOST_USER = ''
