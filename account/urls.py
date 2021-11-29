@@ -20,6 +20,7 @@ urlpatterns = [
     path('users/<username>/', views.user_detail, name='user_detail'),
     path('', include('django.contrib.auth.urls')), 
     path('register/', views.register, name='register'), 
-    path('edit/', views.edit, name='edit'),   
+    path('edit/', views.edit, name='edit'), 
+    path('users/follow/', views.user_follow, name='user_follow'),  
 ]
 
