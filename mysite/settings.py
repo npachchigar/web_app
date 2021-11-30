@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'shop.apps.ShopConfig',
     'cart.apps.CartConfig',
     'orders.apps.OrdersConfig',
+    'payment.apps.PaymentConfig',
 ]
 
 MIDDLEWARE = [
@@ -142,6 +143,20 @@ CART_SESSION_ID = 'cart'
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
+
+# Braintree settings
+BRAINTREE_MERCHANT_ID = 'hmbckpg2tg8v59zm' # Merchant ID
+BRAINTREE_PUBLIC_KEY = 'sbc2mb5273cyjqwp' # Public Key
+BRAINTREE_PRIVATE_KEY = '5700075a3c7a9e3e3ccf3f8b9aba1055' # Private key
+
+import braintree
+
+BRAINTREE_CONF = braintree.Configuration(
+    braintree.Environment.Sandbox,
+    BRAINTREE_MERCHANT_ID,
+    BRAINTREE_PUBLIC_KEY,
+    BRAINTREE_PRIVATE_KEY
+)
 
 
 # E-mail
