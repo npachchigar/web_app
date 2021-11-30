@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'h2sllxd=x@7a&c=@pm$ra0&8e*oz@54@$^j)0etk036@ase0mc'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['mysite.com', 'localhost', '127.0.0.1']
 
@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'easy_thumbnails',
     'actions.apps.ActionsConfig',
     'shop.apps.ShopConfig',
+    'cart.apps.CartConfig',
     
 ]
 
@@ -134,6 +135,8 @@ STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+CART_SESSION_ID = 'cart'
 
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'login'
