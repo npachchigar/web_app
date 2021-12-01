@@ -19,25 +19,28 @@ from django.contrib.sitemaps.views import sitemap
 from blog.sitemaps import PostSitemap
 from django.conf import settings
 from django.conf.urls.static import static
+from django.conf.urls.i18n import i18n_patterns
+from django.utils.translation import gettext_lazy as _
 
 sitemaps = {
     'posts': PostSitemap,
 }
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
+urlpatterns = i18n_patterns (
+    path(_('admin/'), admin.site.urls),
     path('account/', include('account.urls')),
     path('social-auth/', include('social_django.urls', namespace='social')),
     path('images/', include('images.urls', namespace='images')),
     path('blog/', include('blog.urls', namespace='blog')),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps},
           name='django.contrib.sitemaps.views.sitemap'),
-    path('cart/', include('cart.urls', namespace='cart')), 
-    path('orders/', include('orders.urls', namespace='orders')),
-    path('payment/', include('payment.urls', namespace='payment')), 
-    path('coupons/', include('coupons.urls', namespace='coupons')),    
+    path(_('cart/'), include('cart.urls', namespace='cart')),
+    path(_('orders/'), include('orders.urls', namespace='orders')),
+    path(_('payment/'), include('payment.urls', namespace='payment')),
+    path(_('coupons/'), include('coupons.urls', namespace='coupons')),
+    path('rosetta/', include('rosetta.urls')),  
     path('', include('shop.urls', namespace='shop')),      
-]
+)
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, 
