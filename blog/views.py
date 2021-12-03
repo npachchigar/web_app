@@ -115,4 +115,14 @@ def post_share(request, post_id):
                                                     'form': form,
                                                     'sent': sent})
 
+def about(request):
+    return render(request, 'blog/about.html')                                                   
+
+def contact(request):
+    return render(request, 'blog/contact.html')
+
+def shop(request):
+    return render(request, 'blog/shop.html')
+
+        
 
