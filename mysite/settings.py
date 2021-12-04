@@ -166,7 +166,7 @@ CART_SESSION_ID = 'cart'
 
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'login'
-LOGOUT_URL = 'logout'
+LOGOUT_REDIRECT_URL = 'dashboard'
 
 # Braintree settings
 BRAINTREE_MERCHANT_ID = 'hmbckpg2tg8v59zm' # Merchant ID

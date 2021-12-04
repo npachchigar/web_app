@@ -28,7 +28,7 @@ sitemaps = {
 
 urlpatterns = i18n_patterns (
     path(_('admin/'), admin.site.urls),
-    path('account/', include('account.urls')),
+    path('', include('account.urls')),
     path('social-auth/', include('social_django.urls', namespace='social')),
     path('images/', include('images.urls', namespace='images')),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps},
@@ -39,7 +39,7 @@ urlpatterns = i18n_patterns (
     path(_('coupons/'), include('coupons.urls', namespace='coupons')),
     path('rosetta/', include('rosetta.urls')),  
     path('shop/', include('shop.urls', namespace='shop')),    
-    path('', include('blog.urls', namespace='blog')), 
+    path('blog/', include('blog.urls', namespace='blog')), 
      
 )
 
