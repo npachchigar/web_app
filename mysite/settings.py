@@ -25,7 +25,7 @@ SECRET_KEY = 'h2sllxd=x@7a&c=@pm$ra0&8e*oz@54@$^j)0etk036@ase0mc'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mysite.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['veggiediabetesdiet.xyz', '159.223.121.167', 'localhost']
 
 SITE_ID = 1
 
@@ -96,8 +96,12 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'blogdb',
+        'USER': 'blog_a',
+        'PASSWORD': 'HQ_5qY+ds>*d#2!A',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
