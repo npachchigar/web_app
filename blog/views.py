@@ -7,6 +7,7 @@ from .forms import EmailPostForm, CommentForm
 from django.core.mail import send_mail
 from taggit.models import Tag
 from django.db.models import Count
+from django.http import HttpResponse
 
 
 def post_list(request, tag_slug=None):
@@ -115,8 +116,8 @@ def post_share(request, post_id):
                                                     'form': form,
                                                     'sent': sent})
 
-def about(request):
-    return render(request, 'blog/about.html')                                                   
+
+                                            
 
 
 def shop(request):

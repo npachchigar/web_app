@@ -9,7 +9,6 @@ app_name = 'blog'
 urlpatterns = [
     # post views
     path('', views.post_list, name='post_list'),
-    path('about/', views.about, name='about'),    
     path('shop/', views.shop, name='shop'),
     # Django auth
     path('accounts/login', auth_views.LoginView.as_view(template_name="accounts/login.html"), name='login'),
