@@ -197,7 +197,7 @@ AUTHENTICATION_BACKENDS = [
     'social_core.backends.google.GoogleOAuth2',
 ]
 
-# CSRF_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
 
 EMAIL_HOST = ''
 EMAIL_HOST_USER = ''
